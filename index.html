@@ -424,6 +424,10 @@
     }
 
     // Pricing toggle
+    const toggle = document.getElementById('toggleAnnual');
+    const dot = document.getElementById('toggleDot');
+    let annual = false;
+
     function updatePrices() {
       // Atualiza valores R$
       document.querySelectorAll('.price').forEach(el => {
