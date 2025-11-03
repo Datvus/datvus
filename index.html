@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DATVUS • Sistema de Fisioterapia do Joelho</title>
-  <meta name="description" content="O sistema de joelho mais rápido de implementar: fichas automáticas por fase, evolução do paciente, testes e relatório clínico completo. Excel com licença por máquina + integração pronta com Supabase.">
+  <meta name="description"
+    content="O sistema de joelho mais rápido de implementar: fichas automáticas por fase, evolução do paciente, testes e relatório clínico completo. Excel com licença por máquina + integração pronta com Supabase.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,9 +16,9 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto'] },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto'] },
           colors: {
-            brand: { 50:'#eef9ff',100:'#d9f1ff',200:'#b6e6ff',300:'#84d6ff',400:'#49beff',500:'#199dff',600:'#0a7fe6',700:'#0763b4',800:'#074f8e',900:'#083f70' }
+            brand: { 50: '#eef9ff', 100: '#d9f1ff', 200: '#b6e6ff', 300: '#84d6ff', 400: '#49beff', 500: '#199dff', 600: '#0a7fe6', 700: '#0763b4', 800: '#074f8e', 900: '#083f70' }
           },
           boxShadow: { soft: '0 10px 30px rgba(2, 6, 23, 0.08)' }
         }
@@ -24,10 +26,18 @@
     }
   </script>
   <style>
-    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    .glass { background: rgba(255,255,255,.7); backdrop-filter: blur(8px); }
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, .7);
+      backdrop-filter: blur(8px);
+    }
   </style>
 </head>
+
 <body class="bg-white text-slate-900">
   <!-- Mobile menu -->
   <div id="mobileMenu" class="fixed inset-0 z-[100] hidden">
@@ -48,8 +58,11 @@
         <a onclick="toggleMenu(false)" href="#faq" class="block">FAQ</a>
       </nav>
       <div class="mt-6 space-y-3">
-        <a href="#cta" class="block text-center px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 text-sm">Ver demo (3 min)</a>
-        <a href="https://wa.me/5599999999999?text=Quero%20conhecer%20o%20DATVUS%20Fisio%20Joelho" class="block text-center px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-sm">WhatsApp</a>
+        <a href="#cta"
+          class="block text-center px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 text-sm">Ver demo (3
+          min)</a>
+        <a href="https://wa.me/5533999991733?text=Quero%20conhecer%20o%20DATVUS%20Fisio%20Joelho"
+          class="block text-center px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-sm">WhatsApp</a>
       </div>
     </div>
   </div>
@@ -69,10 +82,13 @@
         <a href="#faq" class="hover:text-brand-700">FAQ</a>
       </nav>
       <div class="hidden sm:flex items-center gap-2">
-        <a href="#cta" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 text-sm">Ver demo (3 min)</a>
-        <a href="https://wa.me/5599999999999?text=Quero%20conhecer%20o%20DATVUS%20Fisio%20Joelho" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-sm">WhatsApp</a>
+        <a href="#cta" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 text-sm">Ver demo (3
+          min)</a>
+        <a href="https://wa.me/5533999991733?text=Quero%20conhecer%20o%20DATVUS%20Fisio%20Joelho"
+          class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-sm">WhatsApp</a>
       </div>
-      <button onclick="toggleMenu(true)" class="sm:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Menu">☰</button>
+      <button onclick="toggleMenu(true)" class="sm:hidden p-2 rounded-lg hover:bg-slate-100"
+        aria-label="Menu">☰</button>
     </div>
   </header>
 
@@ -80,7 +96,8 @@
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand-200 blur-3xl opacity-70"></div>
-      <div class="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-brand-100 blur-3xl opacity-70"></div>
+      <div class="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-brand-100 blur-3xl opacity-70">
+      </div>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
       <div data-aos="fade-right">
@@ -88,16 +105,30 @@
           O sistema de <span class="text-brand-700">fisioterapia do joelho</span> mais rápido de implementar
         </h1>
         <p class="mt-4 text-slate-600 text-lg">
-          Fichas automáticas por fase, evolução, testes funcionais e relatório clínico completo. Tudo em Excel, com licença por máquina e pronto para dashboards web via Supabase.
+          Fichas automáticas por fase, evolução, testes funcionais e relatório clínico completo. Tudo em Excel, com
+          licença por máquina e pronto para dashboards web via Supabase.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#cta" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Assistir demo (3 min)</a>
-          <a href="https://wa.me/5599999999999?text=Quero%20implementar%20o%20DATVUS" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Falar com especialista</a>
+          <a href="#cta"
+            class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Assistir
+            demo (3 min)</a>
+          <a href="https://wa.me/5533999991733?text=Quero%20implementar%20o%20DATVUS"
+            class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Falar
+            com especialista</a>
         </div>
         <dl class="mt-8 grid grid-cols-3 gap-4 text-center">
-          <div class="p-4 rounded-xl border border-slate-200"><dt class="text-xs text-slate-500">Implantação</dt><dd class="text-lg font-semibold">1 hora</dd></div>
-          <div class="p-4 rounded-xl border border-slate-200"><dt class="text-xs text-slate-500">Relatório</dt><dd class="text-lg font-semibold">PDF completo</dd></div>
-          <div class="p-4 rounded-xl border border-slate-200"><dt class="text-xs text-slate-500">Licença</dt><dd class="text-lg font-semibold">por máquina</dd></div>
+          <div class="p-4 rounded-xl border border-slate-200">
+            <dt class="text-xs text-slate-500">Implantação</dt>
+            <dd class="text-lg font-semibold">1 hora</dd>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-200">
+            <dt class="text-xs text-slate-500">Relatório</dt>
+            <dd class="text-lg font-semibold">PDF completo</dd>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-200">
+            <dt class="text-xs text-slate-500">Licença</dt>
+            <dd class="text-lg font-semibold">por máquina</dd>
+          </div>
         </dl>
       </div>
       <div class="relative" data-aos="fade-left">
@@ -105,8 +136,10 @@
           <img src="public/visao-geral.jpg" alt="Visão Geral" class="w-full object-cover">
         </div>
         <div class="grid grid-cols-2 gap-4 mt-4">
-          <img src="public/ficha-paciente.jpg" class="w-full rounded-xl border border-slate-200 cursor-zoom-in" alt="Ficha do Paciente" onclick="openLightbox(this.src, this.alt)">
-          <img src="public/relatorio-pdf.jpg" class="w-full rounded-xl border border-slate-200 cursor-zoom-in" alt="Relatório em PDF" onclick="openLightbox(this.src, this.alt)">
+          <img src="public/ficha-paciente.jpg" class="w-full rounded-xl border border-slate-200 cursor-zoom-in"
+            alt="Ficha do Paciente" onclick="openLightbox(this.src, this.alt)">
+          <img src="public/relatorio-pdf.jpg" class="w-full rounded-xl border border-slate-200 cursor-zoom-in"
+            alt="Relatório em PDF" onclick="openLightbox(this.src, this.alt)">
         </div>
         <p class="text-xs text-slate-500 mt-2">* Imagens reais do DATVUS.</p>
       </div>
@@ -120,17 +153,22 @@
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up">
           <div class="text-brand-700 font-semibold">Fichas automáticas</div>
-          <p class="mt-2 text-slate-600 text-sm">Fases por protocolo (LCA, meniscectomia, etc.), exercícios, séries e repetições com histórico.</p>
+          <p class="mt-2 text-slate-600 text-sm">Fases por protocolo (LCA, meniscectomia, etc.), exercícios, séries e
+            repetições com histórico.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up" data-aos-delay="50">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up"
+          data-aos-delay="50">
           <div class="text-brand-700 font-semibold">Relatório profissional</div>
-          <p class="mt-2 text-slate-600 text-sm">PDF completo (Fases, Evolução e Financeiro) pronto para paciente/médico.</p>
+          <p class="mt-2 text-slate-600 text-sm">PDF completo (Fases, Evolução e Financeiro) pronto para
+            paciente/médico.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up"
+          data-aos-delay="100">
           <div class="text-brand-700 font-semibold">Licença por máquina</div>
           <p class="mt-2 text-slate-600 text-sm">Controle de distribuição, atualizações seguras e suporte.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up" data-aos-delay="150">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft" data-aos="fade-up"
+          data-aos-delay="150">
           <div class="text-brand-700 font-semibold">Integração web</div>
           <p class="mt-2 text-slate-600 text-sm">Pronto para sincronizar com Supabase e exibir dashboards online.</p>
         </div>
@@ -153,9 +191,12 @@
           </ul>
         </div>
         <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-          <img src="public/fichas-tabela.jpg" class="rounded-xl border border-slate-200 cursor-zoom-in" alt="Controle de Fichas" onclick="openLightbox(this.src, this.alt)">
-          <img src="public/relatorio-pdf.jpg" class="rounded-xl border border-slate-200 cursor-zoom-in" alt="Relatório PDF" onclick="openLightbox(this.src, this.alt)">
-          <img src="public/visao-geral.jpg" class="rounded-xl border border-slate-200 cursor-zoom-in col-span-2" alt="Visão Geral" onclick="openLightbox(this.src, this.alt)">
+          <img src="public/fichas-tabela.jpg" class="rounded-xl border border-slate-200 cursor-zoom-in"
+            alt="Controle de Fichas" onclick="openLightbox(this.src, this.alt)">
+          <img src="public/relatorio-pdf.jpg" class="rounded-xl border border-slate-200 cursor-zoom-in"
+            alt="Relatório PDF" onclick="openLightbox(this.src, this.alt)">
+          <img src="public/visao-geral.jpg" class="rounded-xl border border-slate-200 cursor-zoom-in col-span-2"
+            alt="Visão Geral" onclick="openLightbox(this.src, this.alt)">
         </div>
       </div>
     </div>
@@ -207,11 +248,36 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="border-t"><td class="p-4">Tempo de implantação</td><td class="p-4">Sem padrão</td><td class="p-4">Demorado</td><td class="p-4 font-semibold text-emerald-700">~1 hora</td></tr>
-            <tr class="border-t"><td class="p-4">Fluxo por fase</td><td class="p-4">Manual</td><td class="p-4">Parcial</td><td class="p-4 font-semibold">Automático</td></tr>
-            <tr class="border-t"><td class="p-4">Relatório clínico</td><td class="p-4">Não padronizado</td><td class="p-4">Básico</td><td class="p-4 font-semibold">Completo em PDF</td></tr>
-            <tr class="border-t"><td class="p-4">Controle de licença</td><td class="p-4">Inexistente</td><td class="p-4">Sim</td><td class="p-4 font-semibold">Por máquina (MAC)</td></tr>
-            <tr class="border-t"><td class="p-4">Dashboards</td><td class="p-4">Não</td><td class="p-4">Limitado</td><td class="p-4 font-semibold">Pronto p/ Supabase</td></tr>
+            <tr class="border-t">
+              <td class="p-4">Tempo de implantação</td>
+              <td class="p-4">Sem padrão</td>
+              <td class="p-4">Demorado</td>
+              <td class="p-4 font-semibold text-emerald-700">~1 hora</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4">Fluxo por fase</td>
+              <td class="p-4">Manual</td>
+              <td class="p-4">Parcial</td>
+              <td class="p-4 font-semibold">Automático</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4">Relatório clínico</td>
+              <td class="p-4">Não padronizado</td>
+              <td class="p-4">Básico</td>
+              <td class="p-4 font-semibold">Completo em PDF</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4">Controle de licença</td>
+              <td class="p-4">Inexistente</td>
+              <td class="p-4">Sim</td>
+              <td class="p-4 font-semibold">Por máquina (MAC)</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4">Dashboards</td>
+              <td class="p-4">Não</td>
+              <td class="p-4">Limitado</td>
+              <td class="p-4 font-semibold">Pronto p/ Supabase</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -225,7 +291,8 @@
         <h2 class="text-2xl font-bold" data-aos="fade-up">Planos</h2>
         <div class="flex items-center gap-3 text-sm" data-aos="fade-up">
           <span>Mensal</span>
-          <button id="toggleAnnual" class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-300 transition">
+          <button id="toggleAnnual"
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-300 transition">
             <span id="toggleDot" class="inline-block h-5 w-5 translate-x-1 rounded-full bg-white transition"></span>
           </button>
           <span>Anual <span class="ml-1 text-emerald-600 font-medium">(-16%)</span></span>
@@ -234,33 +301,41 @@
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft" data-aos="fade-up">
           <div class="text-sm text-slate-500">Essencial</div>
-          <div class="mt-2 text-3xl font-bold"><span class="price" data-monthly="79" data-annual="790">R$ 79</span><span class="text-base font-medium text-slate-500">/mês</span></div>
+          <div class="mt-2 text-3xl font-bold"><span class="price" data-monthly="79" data-annual="790">R$ 79</span><span
+              class="text-base font-medium text-slate-500">/mês</span></div>
           <ul class="mt-4 space-y-2 text-slate-600 text-sm">
             <li>1 licença por máquina</li>
             <li>Atualizações menores</li>
             <li>Suporte por e-mail</li>
           </ul>
-          <a href="#cta" class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Começar</a>
+          <a href="#cta"
+            class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Começar</a>
         </div>
-        <div class="p-6 rounded-2xl border-2 border-brand-600 bg-white shadow-soft" data-aos="fade-up" data-aos-delay="80">
+        <div class="p-6 rounded-2xl border-2 border-brand-600 bg-white shadow-soft" data-aos="fade-up"
+          data-aos-delay="80">
           <div class="text-sm text-slate-500">Profissional</div>
-          <div class="mt-2 text-3xl font-bold"><span class="price" data-monthly="149" data-annual="1490">R$ 149</span><span class="text-base font-medium text-slate-500">/mês</span></div>
+          <div class="mt-2 text-3xl font-bold"><span class="price" data-monthly="149" data-annual="1490">R$
+              149</span><span class="text-base font-medium text-slate-500">/mês</span></div>
           <ul class="mt-4 space-y-2 text-slate-600 text-sm">
             <li>2 licenças</li>
             <li>Suporte priorizado</li>
             <li>1 ajuste/ano</li>
           </ul>
-          <a href="#cta" class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Assinar</a>
+          <a href="#cta"
+            class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Assinar</a>
         </div>
-        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft" data-aos="fade-up" data-aos-delay="160">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft" data-aos="fade-up"
+          data-aos-delay="160">
           <div class="text-sm text-slate-500">Clínica</div>
-          <div class="mt-2 text-3xl font-bold"><span class="price" data-monthly="349" data-annual="3490">R$ 349</span><span class="text-base font-medium text-slate-500">/mês</span></div>
+          <div class="mt-2 text-3xl font-bold"><span class="price" data-monthly="349" data-annual="3490">R$
+              349</span><span class="text-base font-medium text-slate-500">/mês</span></div>
           <ul class="mt-4 space-y-2 text-slate-600 text-sm">
             <li>5 licenças</li>
             <li>Onboarding guiado</li>
             <li>2 ajustes/ano</li>
           </ul>
-          <a href="#cta" class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Falar com vendas</a>
+          <a href="#cta" class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Falar
+            com vendas</a>
         </div>
       </div>
     </div>
@@ -281,7 +356,8 @@
         </details>
         <details class="p-4 rounded-xl bg-white border border-slate-200" data-aos="fade-up">
           <summary class="cursor-pointer font-medium">Posso ver dashboards online?</summary>
-          <p class="mt-2 text-slate-600">Sim. O DATVUS pode sincronizar dados com Supabase para exibir métricas na web.</p>
+          <p class="mt-2 text-slate-600">Sim. O DATVUS pode sincronizar dados com Supabase para exibir métricas na web.
+          </p>
         </details>
       </div>
     </div>
@@ -291,17 +367,21 @@
   <section id="cta" class="bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
       <h2 class="text-3xl font-extrabold" data-aos="zoom-in">Veja a demo e implante em 1 hora</h2>
-      <p class="mt-3 text-slate-600" data-aos="zoom-in" data-aos-delay="60">Ganhe tempo nas rotinas de joelho e entregue relatórios profissionais.</p>
+      <p class="mt-3 text-slate-600" data-aos="zoom-in" data-aos-delay="60">Ganhe tempo nas rotinas de joelho e entregue
+        relatórios profissionais.</p>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3" data-aos="zoom-in" data-aos-delay="120">
-        <a href="https://www.youtube.com/watch?v=SEU_VIDEO_DEMO" class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Assistir demo</a>
-        <a href="https://wa.me/5599999999999?text=Quero%20implementar%20o%20DATVUS" class="px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Falar no WhatsApp</a>
+        <a href="https://www.youtube.com/watch?v=SEU_VIDEO_DEMO"
+          class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Assistir demo</a>
+        <a href="https://wa.me/5533999991733?text=Quero%20implementar%20o%20DATVUS"
+          class="px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Falar no WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-500 flex flex-col sm:flex-row justify-between gap-3">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-500 flex flex-col sm:flex-row justify-between gap-3">
       <div>© <span id="y"></span> DATVUS. Todos os direitos reservados.</div>
       <div class="flex gap-4">
         <a href="#" class="hover:text-slate-700">Termos</a>
@@ -316,7 +396,8 @@
     <figure class="relative max-w-5xl mx-auto p-4">
       <img id="lightboxImg" src="" alt="" class="max-h-[85vh] w-auto rounded-xl shadow-2xl">
       <figcaption id="lightboxCap" class="mt-3 text-center text-slate-200 text-sm"></figcaption>
-      <button onclick="closeLightbox()" aria-label="Fechar" class="absolute -top-2 -right-2 bg-white rounded-full p-2 shadow">✕</button>
+      <button onclick="closeLightbox()" aria-label="Fechar"
+        class="absolute -top-2 -right-2 bg-white rounded-full p-2 shadow">✕</button>
     </figure>
   </div>
 
@@ -343,16 +424,23 @@
     }
 
     // Pricing toggle
-    const toggle = document.getElementById('toggleAnnual');
-    const dot = document.getElementById('toggleDot');
-    let annual = false;
     function updatePrices() {
+      // Atualiza valores R$
       document.querySelectorAll('.price').forEach(el => {
         const m = el.getAttribute('data-monthly');
         const a = el.getAttribute('data-annual');
         el.textContent = 'R$ ' + (annual ? a : m);
       });
+
+      // Atualiza texto "/mês" para "/ano"
+      document.querySelectorAll('.price').forEach(price => {
+        const timeSpan = price.nextElementSibling; // o <span>/mês</span> logo após o preço
+        if (timeSpan && timeSpan.tagName === 'SPAN') {
+          timeSpan.textContent = annual ? '/ano' : '/mês';
+        }
+      });
     }
+
     if (toggle) {
       toggle.addEventListener('click', () => {
         annual = !annual;
@@ -381,4 +469,5 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
